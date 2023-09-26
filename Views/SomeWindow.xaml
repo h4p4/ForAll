@@ -7,6 +7,13 @@
         Title="SomeWindow" Height="450" Width="800"
         WindowStartupLocation="Manual"
         Left="800" Top="0">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Styles/Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
         <Button Margin="100" Content="я кнопка" />
 

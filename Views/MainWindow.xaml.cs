@@ -10,12 +10,6 @@
         public MainWindow()
         {
             InitializeComponent();
-
-            // Инициализация окон.
-            var someWindow = new SomeWindow();
-            var someWindowWithControl = new SomeWindowWithControl();
-            someWindow.Show();
-            someWindowWithControl.Show();
         }
     }
 }

@@ -8,13 +8,11 @@
         WindowStartupLocation="Manual"
         Left="1600" Top="0">
     <Window.Resources>
-
-        <!--если так то будет переопределять стили--> 
-
-        <!--<Style TargetType="Button">
-            <Setter Property="FontSize" Value="40"/>
-        </Style>-->
-
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Styles/Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
     <Grid>
         <!--а вот так норм-->

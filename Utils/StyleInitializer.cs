@@ -19,6 +19,25 @@ public static class StyleInitializer
 
         var style = new Style(typeof(ContentControl));
         style.Resources.MergedDictionaries.Add(resources);
+
         FrameworkElement.StyleProperty.OverrideMetadata(typeof(ContentControl), new FrameworkPropertyMetadata(style));
+    }
+
+    public static ResourceDictionary InitializeV2(bool isLight)
+    {
+        var color = isLight ? "LightColors" : "DarkColors";
+
+        var mainResources = new ResourceDictionary
+        {
+            Source = new Uri("pack://application:,,,/test_forall;component/Styles/Style.xaml", UriKind.Absolute)
+        };
+
+        var colorResources = new ResourceDictionary
+        {
+            Source = new Uri($"pack://application:,,,/test_forall;component/Styles/{color}.xaml", UriKind.Absolute)
+        };
+        mainResources.MergedDictionaries.Clear();
+        mainResources.MergedDictionaries.Add(colorResources);
+        return mainResources;
     }
 }

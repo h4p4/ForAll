@@ -11,4 +11,8 @@
     <Page Include="App.xaml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UI.Styles\UI.Styles.csproj" />
+  </ItemGroup>
+
 </Project>

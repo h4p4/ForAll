@@ -1,7 +1,8 @@
 ﻿namespace test_forall
 {
     using System.Windows;
-    using test_forall.Utils;
+
+    using UI.Styles.Utils;
 
     /// <summary>
     /// Interaction logic for App.xaml
@@ -11,7 +12,7 @@
         public App()
         {
             // Вызов метода инициализации стилей до инициализации окон.
-            StyleInitializer.Initialize();
+            StyleInitializer.ApplyTheme(typeof(MainWindow).Assembly, Theme.Dark);
         }
     }
 }
